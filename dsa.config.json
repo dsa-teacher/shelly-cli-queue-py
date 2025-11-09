@@ -1,9 +1,10 @@
 {
+  "projectId": "c0af2850-bef6-4f2d-8c0a-e34b514e5fb6",
+  "projectToken": "89cd9469-79cc-4296-9a53-3dbf807a097d8653b30fd6e74cba9c2d49dbcac29199",
   "moduleId": "queue",
   "language": "Python",
-  "testCommand": "python tests/run.py",
+  "apiUrl": "https://mwlhxwbkuumjxpnvldli.supabase.co/functions/v1",
+  "testCommand": "python3 tests/run.py",
   "reportFile": ".dsa-report.json",
-  "projectId": "TBD",
-  "projectToken": "TBD"
+  "currentChallengeIndex": 0
 }
-
