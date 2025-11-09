@@ -1,0 +1,31 @@
+{
+  "moduleId": "queue",
+  "summary": "1/5 tests passed",
+  "pass": false,
+  "cases": [
+    {
+      "subchallengeId": "create-class",
+      "passed": true
+    },
+    {
+      "subchallengeId": "enqueue",
+      "passed": false,
+      "message": "============================= test session starts ==============================\nplatform darwin -- Python 3.13.1, pytest-7.4.0, pluggy-1.6.0 -- /Library/Frameworks/Python.framework/Versions/3.13/bin/python3\ncachedir: .pytest_cache\nrootdir: /Users/joudbitar/Code/Projects/dsa-templates/template-dsa-queue-py\nplugins: anyio-4.9.0, mock-3.14.1\ncollecting ... collected 1 item\n\ntests/test_02_enqueue.py::test_enqueue FAILED                            [100%]\n\n=================================== FAILURES ===================================\n_________________________________ test_enqueue _________________________________\n\n    def test_enqueue():\n        \"\"\"Test adding elements to the queue\"\"\"\n        queue = Queue()\n        queue.enqueue(10)\n>       assert queue.size() == 1\nE       assert 0 == 1\nE        +  where 0 = <bound method Queue.size of <src.queue.Queue object at 0x104487230>>()\nE        +    where <bound method Queue.size of <src.queue.Queue object at 0x104487230>> = <src.queue.Queue object at 0x104487230>.size\n\ntests/test_02_enqueue.py:7: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_02_enqueue.py::test_enqueue - assert 0 == 1\n============================== 1 failed in 0.01s ==============================="
+    },
+    {
+      "subchallengeId": "dequeue",
+      "passed": false,
+      "message": "============================= test session starts ==============================\nplatform darwin -- Python 3.13.1, pytest-7.4.0, pluggy-1.6.0 -- /Library/Frameworks/Python.framework/Versions/3.13/bin/python3\ncachedir: .pytest_cache\nrootdir: /Users/joudbitar/Code/Projects/dsa-templates/template-dsa-queue-py\nplugins: anyio-4.9.0, mock-3.14.1\ncollecting ... collected 2 items\n\ntests/test_03_dequeue.py::test_dequeue FAILED                            [ 50%]\ntests/test_03_dequeue.py::test_dequeue_empty PASSED                      [100%]\n\n=================================== FAILURES ===================================\n_________________________________ test_dequeue _________________________________\n\n    def test_dequeue():\n        \"\"\"Test removing and returning front element\"\"\"\n        queue = Queue()\n        queue.enqueue(10)\n        queue.enqueue(20)\n>       assert queue.dequeue() == 10\nE       assert None == 10\nE        +  where None = <bound method Queue.dequeue of <src.queue.Queue object at 0x105fab230>>()\nE        +    where <bound method Queue.dequeue of <src.queue.Queue object at 0x105fab230>> = <src.queue.Queue object at 0x105fab230>.dequeue\n\ntests/test_03_dequeue.py:8: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_03_dequeue.py::test_dequeue - assert None == 10\n========================= 1 failed, 1 passed in 0.01s =========================="
+    },
+    {
+      "subchallengeId": "front",
+      "passed": false,
+      "message": "============================= test session starts ==============================\nplatform darwin -- Python 3.13.1, pytest-7.4.0, pluggy-1.6.0 -- /Library/Frameworks/Python.framework/Versions/3.13/bin/python3\ncachedir: .pytest_cache\nrootdir: /Users/joudbitar/Code/Projects/dsa-templates/template-dsa-queue-py\nplugins: anyio-4.9.0, mock-3.14.1\ncollecting ... collected 2 items\n\ntests/test_04_front.py::test_front FAILED                                [ 50%]\ntests/test_04_front.py::test_front_empty PASSED                          [100%]\n\n=================================== FAILURES ===================================\n__________________________________ test_front __________________________________\n\n    def test_front():\n        \"\"\"Test returning front element without removing\"\"\"\n        queue = Queue()\n        queue.enqueue(10)\n        queue.enqueue(20)\n>       assert queue.front() == 10\nE       assert None == 10\nE        +  where None = <bound method Queue.front of <src.queue.Queue object at 0x103cdb230>>()\nE        +    where <bound method Queue.front of <src.queue.Queue object at 0x103cdb230>> = <src.queue.Queue object at 0x103cdb230>.front\n\ntests/test_04_front.py:8: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_04_front.py::test_front - assert None == 10\n========================= 1 failed, 1 passed in 0.01s =========================="
+    },
+    {
+      "subchallengeId": "size",
+      "passed": false,
+      "message": "============================= test session starts ==============================\nplatform darwin -- Python 3.13.1, pytest-7.4.0, pluggy-1.6.0 -- /Library/Frameworks/Python.framework/Versions/3.13/bin/python3\ncachedir: .pytest_cache\nrootdir: /Users/joudbitar/Code/Projects/dsa-templates/template-dsa-queue-py\nplugins: anyio-4.9.0, mock-3.14.1\ncollecting ... collected 1 item\n\ntests/test_05_size.py::test_size FAILED                                  [100%]\n\n=================================== FAILURES ===================================\n__________________________________ test_size ___________________________________\n\n    def test_size():\n        \"\"\"Test returning the number of elements\"\"\"\n        queue = Queue()\n        assert queue.size() == 0\n        queue.enqueue(10)\n>       assert queue.size() == 1\nE       assert 0 == 1\nE        +  where 0 = <bound method Queue.size of <src.queue.Queue object at 0x1048eb230>>()\nE        +    where <bound method Queue.size of <src.queue.Queue object at 0x1048eb230>> = <src.queue.Queue object at 0x1048eb230>.size\n\ntests/test_05_size.py:8: AssertionError\n=========================== short test summary info ============================\nFAILED tests/test_05_size.py::test_size - assert 0 == 1\n============================== 1 failed in 0.01s ==============================="
+    }
+  ]
+}

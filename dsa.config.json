@@ -1,0 +1,9 @@
+{
+  "moduleId": "queue",
+  "language": "Python",
+  "testCommand": "python tests/run.py",
+  "reportFile": ".dsa-report.json",
+  "projectId": "TBD",
+  "projectToken": "TBD"
+}
+
